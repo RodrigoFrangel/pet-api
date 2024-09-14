@@ -1,0 +1,21 @@
+{
+  "name": "pet-api",
+  "version": "1.0.0",
+  "description": "Uma simples API RESTful para registrar pets. Para fins educativos.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "RodrigoFrangel",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
