@@ -1,6 +1,10 @@
 # Pet API | Because We Love Our Pets
 
-- [ ] Criar um arquivo dedicado para rotas -> router.js
-- [ ] Revisar o código mais uma vez
+<img src="pet-api-repo-banner.png" alt="Banner do repositório">
+
+- [x] Criar um arquivo dedicado para rotas -> router.js
+- [x] Revisar o código mais uma vez
 - [ ] Dockerizar (futuramente)
-- [ ] Adicionar novas *features*
+- [x] Adicionar novas *features*
+- [x] Incluir mais detalhes na model Pet
+- [x] Criar uma nova model (PetOwner)
