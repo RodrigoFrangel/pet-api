@@ -1,6 +1,6 @@
-require('dotenv').config();
-const express = require('express');
-const router = require('../routes/router');
+import 'dotenv/config.js';
+import express from 'express';
+import router from '../routes/router.js';
 
 const app = express();
 
@@ -8,4 +8,4 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
-module.exports = app;
+export default app;

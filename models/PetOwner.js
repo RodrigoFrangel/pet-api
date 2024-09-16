@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const PetOwner = mongoose.model('PetOwner', {
   name: { type: String, required: true },
   email: { type: String, required: true },
   phoneNumber: { type: String, required: true },
-  pets: [{ type: mongoose.Types.ObjectId, ref: 'Pet' }]  // Array de pets referenciados
+  pets: [{ type: mongoose.Types.ObjectId, ref: 'Pet' }], // Array de pets referenciados
 });
 
-module.exports = PetOwner;
+export default PetOwner;

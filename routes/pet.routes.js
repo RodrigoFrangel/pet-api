@@ -1,11 +1,35 @@
-const router = require('express').Router();
-const petController = require('../controllers/pet.controller');
+import { Router } from 'express';
+import controller from '../controllers/pet.controller.js';
+import {
+  validatePetName,
+  validateSpecies,
+  validateAge,
+  validatePetId,
+} from '../middlewares/validations/index.js';
 
-router.post('/', petController.create);
-router.get('/', petController.getAll);
-router.delete('/', petController.deleteAll);
-router.get('/:id', petController.getById);
-router.put('/:id', petController.updateById);
-router.delete('/:id', petController.deleteById);
+const router = Router();
 
-module.exports = router;
+router.post(
+  '/',
+  validatePetName,
+  validateSpecies,
+  validateAge,
+  validatePetId,
+  controller.create,
+);
+
+router.put(
+  '/:id',
+  validatePetName,
+  validateSpecies,
+  validateAge,
+  validatePetId,
+  controller.updateById,
+);
+
+router.get('/', controller.getAll);
+router.delete('/', controller.deleteAll);
+router.get('/:id', validatePetId, controller.getById);
+router.delete('/:id', validatePetId, controller.deleteById);
+
+export default router;

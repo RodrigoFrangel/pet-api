@@ -1,10 +1,10 @@
-require('dotenv').config();
-const app = require('./app');
-const mongoose = require('mongoose');
+import 'dotenv/config.js';
+import mongoose from 'mongoose';
+import app from './app.js';
 
 // Importa os valores do .env e os armazena em variáveis
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const { DB_USER } = process.env;
+const { DB_PASSWORD } = process.env;
 const PORT = process.env.PORT || 3000;
 
 // Conecta ao MongoDB (assumindo uma instância local do MongoDB)
@@ -17,5 +17,5 @@ mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@simplercluster.akl99.m
     console.log(`Rodando na porta ${PORT}`);
   });
 }).catch((err) => {
-  console.log("Erro ao conectar com o MongoDB:", err.message);
-})
+  console.log('Erro ao conectar com o MongoDB:', err.message);
+});

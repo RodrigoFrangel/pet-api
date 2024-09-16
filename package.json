@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Uma simples API RESTful para registrar pets. Para fins educativos.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "start": "nodemon ./src/server.js"
   },
   "keywords": [],
@@ -16,6 +18,11 @@
     "mongoose": "^8.6.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.30.0",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4"
   }
 }
